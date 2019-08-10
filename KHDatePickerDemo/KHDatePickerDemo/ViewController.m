@@ -43,7 +43,7 @@
 
 - (IBAction)dayChooseBtn:(UIButton *)sender
 {
-    [KHDatePicker showWithDateStyle:DateStyleShowYearMonthDay nowDate:[NSDate date] minimumDate:nil maximumDate:[NSDate date] completion:^(NSDate *date, NSString *dateStr) {
+    [KHDatePicker showWithDateStyle:DateStyleShowYearMonthDay nowDate:nil minimumDate:nil maximumDate:nil completion:^(NSDate *date, NSString *dateStr) {
         
         [sender setTitle:dateStr forState:UIControlStateNormal];
     }];
