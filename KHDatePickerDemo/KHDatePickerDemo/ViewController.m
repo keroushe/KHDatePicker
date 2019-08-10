@@ -51,7 +51,7 @@
 
 - (IBAction)weekChooseBtn:(UIButton *)sender
 {
-    [KHDatePicker showWithDateStyle:DateStyleShowYearMonthWeek nowDate:[NSDate date] minimumDate:nil maximumDate:[NSDate date] completion:^(NSDate *date, NSString *dateStr) {
+    [KHDatePicker showWithDateStyle:DateStyleShowYearMonthWeek nowDate:nil minimumDate:nil maximumDate:nil completion:^(NSDate *date, NSString *dateStr) {
         
         [sender setTitle:dateStr forState:UIControlStateNormal];
     }];
