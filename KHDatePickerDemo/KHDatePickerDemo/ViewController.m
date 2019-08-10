@@ -27,22 +27,34 @@
 
 - (IBAction)yearChooseBtn:(UIButton *)sender
 {
-    
+    [KHDatePicker showWithDateStyle:DateStyleShowYear nowDate:[NSDate date] minimumDate:nil maximumDate:[NSDate date] completion:^(NSDate *date, NSString *dateStr) {
+        
+        [sender setTitle:dateStr forState:UIControlStateNormal];
+    }];
 }
 
 - (IBAction)monthChooseBtn:(UIButton *)sender
 {
-    
+    [KHDatePicker showWithDateStyle:DateStyleShowYearMonth nowDate:[NSDate date] minimumDate:nil maximumDate:[NSDate date] completion:^(NSDate *date, NSString *dateStr) {
+        
+        [sender setTitle:dateStr forState:UIControlStateNormal];
+    }];
 }
 
 - (IBAction)dayChooseBtn:(UIButton *)sender
 {
-    
+    [KHDatePicker showWithDateStyle:DateStyleShowYearMonthDay nowDate:[NSDate date] minimumDate:nil maximumDate:[NSDate date] completion:^(NSDate *date, NSString *dateStr) {
+        
+        [sender setTitle:dateStr forState:UIControlStateNormal];
+    }];
 }
 
 - (IBAction)weekChooseBtn:(UIButton *)sender
 {
-    
+    [KHDatePicker showWithDateStyle:DateStyleShowYearMonthWeek nowDate:[NSDate date] minimumDate:nil maximumDate:[NSDate date] completion:^(NSDate *date, NSString *dateStr) {
+        
+        [sender setTitle:dateStr forState:UIControlStateNormal];
+    }];
 }
 
 @end
