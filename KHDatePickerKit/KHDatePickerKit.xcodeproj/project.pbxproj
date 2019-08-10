@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		AC0F81BC22E02737005846F2 /* KHDatePickerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AC0F81BA22E02737005846F2 /* KHDatePickerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC1DCEE522FC0598007184FE /* KHDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = AC1DCEE322FC0598007184FE /* KHDatePicker.h */; };
+		AC1DCEE522FC0598007184FE /* KHDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = AC1DCEE322FC0598007184FE /* KHDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC1DCEE622FC0598007184FE /* KHDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DCEE422FC0598007184FE /* KHDatePicker.m */; };
-		AC1DCEE922FC0609007184FE /* KHCalendarUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = AC1DCEE722FC0609007184FE /* KHCalendarUtil.h */; };
+		AC1DCEE922FC0609007184FE /* KHCalendarUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = AC1DCEE722FC0609007184FE /* KHCalendarUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC1DCEEA22FC0609007184FE /* KHCalendarUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DCEE822FC0609007184FE /* KHCalendarUtil.m */; };
 		AC1DCEEE22FC0782007184FE /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DCEEC22FC0782007184FE /* NSDate+Extension.m */; };
-		AC1DCEEF22FC0782007184FE /* NSDate+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = AC1DCEED22FC0782007184FE /* NSDate+Extension.h */; };
+		AC1DCEEF22FC0782007184FE /* NSDate+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = AC1DCEED22FC0782007184FE /* NSDate+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,9 +93,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC1DCEE522FC0598007184FE /* KHDatePicker.h in Headers */,
 				AC1DCEE922FC0609007184FE /* KHCalendarUtil.h in Headers */,
 				AC0F81BC22E02737005846F2 /* KHDatePickerKit.h in Headers */,
-				AC1DCEE522FC0598007184FE /* KHDatePicker.h in Headers */,
 				AC1DCEEF22FC0782007184FE /* NSDate+Extension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +111,7 @@
 				AC0F81B322E02737005846F2 /* Sources */,
 				AC0F81B422E02737005846F2 /* Frameworks */,
 				AC0F81B522E02737005846F2 /* Resources */,
+				AC1DCF2322FEB8E3007184FE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -161,6 +162,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC1DCF2322FEB8E3007184FE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ \"${ACTION}\" = \"build\" ]\nthen\nINSTALL_DIR=${SRCROOT}/Products/${PROJECT_NAME}.framework\n\nDEVICE_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\n\nSIMULATOR_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework\n\n# 如果真机包或模拟包不存在，则退出合并\nif [ ! -d \"${DEVICE_DIR}\" ] || [ ! -d \"${SIMULATOR_DIR}\" ]\nthen\nexit 0\nfi\n\n# 如果合并包已经存在，则替换\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n\n# 使用lipo命令将其合并成一个通用framework  \n# 最后将生成的通用framework放置在工程根目录下新建的Products目录下  \nlipo -create \"${DEVICE_DIR}/${PROJECT_NAME}\" \"${SIMULATOR_DIR}/${PROJECT_NAME}\" -output \"${INSTALL_DIR}/${PROJECT_NAME}\"\n\n#合并完成后打开目录\nopen \"${SRCROOT}/Products\"\n\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC0F81B322E02737005846F2 /* Sources */ = {
@@ -310,6 +331,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hexs.KHDatePickerKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -333,6 +355,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hexs.KHDatePickerKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

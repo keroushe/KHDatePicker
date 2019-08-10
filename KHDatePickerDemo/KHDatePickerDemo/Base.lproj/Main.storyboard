@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTV-CA-s0b">
+                                <rect key="frame" x="50" y="194" width="314" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="O54-VF-ySr"/>
+                                </constraints>
+                                <state key="normal" title="年"/>
+                                <connections>
+                                    <action selector="yearChooseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Tr-gu-t9v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pr-39-p4f">
+                                <rect key="frame" x="50" y="274" width="314" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YEt-0v-r1W"/>
+                                </constraints>
+                                <state key="normal" title="月"/>
+                                <connections>
+                                    <action selector="monthChooseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nZi-FA-q4s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZC-eM-DIO">
+                                <rect key="frame" x="50" y="354" width="314" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gKg-4Z-863"/>
+                                </constraints>
+                                <state key="normal" title="日"/>
+                                <connections>
+                                    <action selector="dayChooseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2d8-ah-Bcn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSG-jc-8tb">
+                                <rect key="frame" x="50" y="434" width="314" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="337-L1-01t"/>
+                                </constraints>
+                                <state key="normal" title="周"/>
+                                <connections>
+                                    <action selector="weekChooseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fPE-rD-jr4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Pr-39-p4f" firstAttribute="leading" secondItem="iTV-CA-s0b" secondAttribute="leading" id="GIb-QW-6na"/>
+                            <constraint firstItem="mZC-eM-DIO" firstAttribute="trailing" secondItem="2Pr-39-p4f" secondAttribute="trailing" id="GNF-sz-90z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iTV-CA-s0b" secondAttribute="trailing" constant="50" id="Jj9-O1-ck4"/>
+                            <constraint firstItem="iTV-CA-s0b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="MIZ-XO-Fwe"/>
+                            <constraint firstItem="iTV-CA-s0b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="Vso-fF-ocT"/>
+                            <constraint firstItem="mZC-eM-DIO" firstAttribute="top" secondItem="2Pr-39-p4f" secondAttribute="bottom" constant="30" id="XRh-qh-cdn"/>
+                            <constraint firstItem="WSG-jc-8tb" firstAttribute="top" secondItem="mZC-eM-DIO" secondAttribute="bottom" constant="30" id="dGW-e0-uKA"/>
+                            <constraint firstItem="2Pr-39-p4f" firstAttribute="top" secondItem="iTV-CA-s0b" secondAttribute="bottom" constant="30" id="jjx-SN-pEz"/>
+                            <constraint firstItem="2Pr-39-p4f" firstAttribute="trailing" secondItem="iTV-CA-s0b" secondAttribute="trailing" id="ntu-Yt-7of"/>
+                            <constraint firstItem="WSG-jc-8tb" firstAttribute="trailing" secondItem="mZC-eM-DIO" secondAttribute="trailing" id="rFf-dJ-BHr"/>
+                            <constraint firstItem="WSG-jc-8tb" firstAttribute="leading" secondItem="mZC-eM-DIO" secondAttribute="leading" id="tsk-wQ-ByC"/>
+                            <constraint firstItem="mZC-eM-DIO" firstAttribute="leading" secondItem="2Pr-39-p4f" secondAttribute="leading" id="uTa-yj-HDX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dayBtn" destination="mZC-eM-DIO" id="kcR-ig-Rp6"/>
+                        <outlet property="monthBtn" destination="2Pr-39-p4f" id="I3v-sH-EEO"/>
+                        <outlet property="weekBtn" destination="WSG-jc-8tb" id="Jox-mh-UII"/>
+                        <outlet property="yearBtn" destination="iTV-CA-s0b" id="SER-jj-g6V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

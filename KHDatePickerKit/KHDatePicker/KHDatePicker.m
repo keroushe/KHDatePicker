@@ -244,9 +244,9 @@
 
 - (void)showViewWithDateStyle:(SCDateStyle)pickerStyle nowDate:(NSDate *)nowDate minimumDate:(NSDate *)minimumDate maximumDate:(NSDate *)maximumDate completion:(void(^)(NSDate *date, NSString *dateStr))completion
 {
-    self.nowdate = nowDate;
-    self.minimumDate = minimumDate;
-    self.maximumDate = maximumDate;
+    self.nowdate = nowDate ? : [NSDate date];
+    self.minimumDate = minimumDate ? : [NSDate date:@"1900-01-01 00:00" WithFormat:@"yyyy-MM-dd HH:mm"];
+    self.maximumDate = maximumDate ? : [NSDate date];
     self.doneCompletion = completion;
     self.pickerStyle = pickerStyle;
     
