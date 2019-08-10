@@ -13,7 +13,7 @@
 		AC1DCF0922FD133B007184FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1DCF0822FD133B007184FE /* Assets.xcassets */; };
 		AC1DCF0C22FD133B007184FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1DCF0A22FD133B007184FE /* LaunchScreen.storyboard */; };
 		AC1DCF0F22FD133B007184FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DCF0E22FD133B007184FE /* main.m */; };
-		AC1DCF1722FD1408007184FE /* KHDatePickerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1DCF1622FD1408007184FE /* KHDatePickerKit.framework */; };
+		AC1DCF2722FEB9C9007184FE /* KHDatePickerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1DCF2622FEB9C9007184FE /* KHDatePickerKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		AC1DCF0B22FD133B007184FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC1DCF0D22FD133B007184FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC1DCF0E22FD133B007184FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AC1DCF1622FD1408007184FE /* KHDatePickerKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KHDatePickerKit.framework; sourceTree = "<group>"; };
+		AC1DCF2622FEB9C9007184FE /* KHDatePickerKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KHDatePickerKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC1DCF1722FD1408007184FE /* KHDatePickerKit.framework in Frameworks */,
+				AC1DCF2722FEB9C9007184FE /* KHDatePickerKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +78,7 @@
 		AC1DCF1522FD1408007184FE /* KHDatePickerKit */ = {
 			isa = PBXGroup;
 			children = (
-				AC1DCF1622FD1408007184FE /* KHDatePickerKit.framework */,
+				AC1DCF2622FEB9C9007184FE /* KHDatePickerKit.framework */,
 			);
 			path = KHDatePickerKit;
 			sourceTree = "<group>";
@@ -304,9 +304,15 @@
 					"$(PROJECT_DIR)/KHDatePickerDemo/KHDatePickerKit",
 				);
 				INFOPLIST_FILE = KHDatePickerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(PROJECT_DIR)/KHDatePickerDemo/KHDatePickerKit/KHDatePickerKit.framework/KHDatePickerKit",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hexs.KHDatePickerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -325,9 +331,15 @@
 					"$(PROJECT_DIR)/KHDatePickerDemo/KHDatePickerKit",
 				);
 				INFOPLIST_FILE = KHDatePickerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(PROJECT_DIR)/KHDatePickerDemo/KHDatePickerKit/KHDatePickerKit.framework/KHDatePickerKit",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hexs.KHDatePickerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

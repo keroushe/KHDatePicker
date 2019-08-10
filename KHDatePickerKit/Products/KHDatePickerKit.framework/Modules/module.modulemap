@@ -1,0 +1,6 @@
+framework module KHDatePickerKit {
+  umbrella header "KHDatePickerKit.h"
+
+  export *
+  module * { export * }
+}
