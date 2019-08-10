@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC0F81BC22E02737005846F2 /* KHDatePickerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AC0F81BA22E02737005846F2 /* KHDatePickerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC1DCEE522FC0598007184FE /* KHDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = AC1DCEE322FC0598007184FE /* KHDatePicker.h */; };
+		AC1DCEE522FC0598007184FE /* KHDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = AC1DCEE322FC0598007184FE /* KHDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC1DCEE622FC0598007184FE /* KHDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DCEE422FC0598007184FE /* KHDatePicker.m */; };
 		AC1DCEE922FC0609007184FE /* KHCalendarUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = AC1DCEE722FC0609007184FE /* KHCalendarUtil.h */; };
 		AC1DCEEA22FC0609007184FE /* KHCalendarUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DCEE822FC0609007184FE /* KHCalendarUtil.m */; };
@@ -94,8 +94,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC1DCEE922FC0609007184FE /* KHCalendarUtil.h in Headers */,
-				AC0F81BC22E02737005846F2 /* KHDatePickerKit.h in Headers */,
 				AC1DCEE522FC0598007184FE /* KHDatePicker.h in Headers */,
+				AC0F81BC22E02737005846F2 /* KHDatePickerKit.h in Headers */,
 				AC1DCEEF22FC0782007184FE /* NSDate+Extension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +310,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hexs.KHDatePickerKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -333,6 +334,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hexs.KHDatePickerKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
